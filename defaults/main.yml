@@ -1,0 +1,15 @@
+---
+# tor configuration file
+torrc: /etc/tor/torrc
+
+# directory with private key and hostname
+tor_hidden_service_dir: /var/lib/tor/hidden_service/
+
+# tor hidden service port
+tor_hidden_service_port: 80
+
+# nginx host
+nginx_host: 127.0.0.1
+
+# nginx port
+nginx_port: 8080

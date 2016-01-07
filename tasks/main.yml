@@ -1,0 +1,9 @@
+---
+- name: install necessary packages for the tor onion service
+  apt: name=tor
+       state=present
+
+- name: copy torrc template
+  template: src=torrc.j2
+            dest={{ torrc }}
+  notify: restart tor

@@ -1,7 +1,7 @@
 ansible-role-tor-nginx-debian
 =========
 
-Redirect [tor hidden service](https://www.torproject.org/docs/hidden-services.html.en) via [nginx](http://nginx.org) to an https website. Can be used as a workaround to use a content delivery network which works with dns round robin behind a tor onion service. Be sure not to redirect to an http website as this would compromise the end-to-end encryption promised by a onion services.
+Redirect [tor hidden service](https://www.torproject.org/docs/hidden-services.html.en) via [nginx](http://nginx.org) to a https website. Can be used as a workaround to use a content delivery network which works with dns round robin behind a tor onion service. Be sure not to redirect to a http website as this would compromise the end-to-end encryption promised by onion services.
 
 Requirements
 ------------

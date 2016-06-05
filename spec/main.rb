@@ -14,9 +14,17 @@ describe port 9050 do
 end
 
 describe file '/var/lib/tor/hidden_service/private_key' do
+  it { should exist }
   it { should be_file }
+  it { should be_owned_by 'debian-tor' }
+  it { should be_grouped_into 'debian-tor' }
+  it { should be_mode 600 }
 end
 
 describe file '/var/lib/tor/hidden_service/hostname' do
+  it { should exist }
   it { should be_file }
+  it { should be_owned_by 'debian-tor' }
+  it { should be_grouped_into 'debian-tor' }
+  it { should be_mode 600 }
 end

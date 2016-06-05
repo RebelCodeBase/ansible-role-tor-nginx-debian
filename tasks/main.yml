@@ -1,9 +1,12 @@
 ---
 - name: install necessary packages for the tor onion service
   apt:
-    package: tor
+    package: "{{ item }}"
     state: latest
   notify: restart tor
+  with_items:
+    - tor
+    - torsocks
 
 - name: copy torrc template
   template:

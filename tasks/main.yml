@@ -8,6 +8,15 @@
     - tor
     - torsocks
 
+- name: create tor hidden service directory
+  file:
+    path: "{{ tor_hidden_service_dir }}"
+    state: directory
+    owner: debian-tor
+    group: debian-tor
+    mode: 02700
+  notify: restart tor
+
 - name: copy torrc template
   template:
     src: torrc.j2

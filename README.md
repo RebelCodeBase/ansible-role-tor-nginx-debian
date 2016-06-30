@@ -67,6 +67,11 @@ Example Playbook
       notify: restart tor
 ```
 
+Configuration
+-------------
+
+You should add *--require spec_helper* to *.rspec*.
+
 License
 -------
 

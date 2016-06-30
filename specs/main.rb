@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe package 'tor' do
   it { should be_installed }
 end
